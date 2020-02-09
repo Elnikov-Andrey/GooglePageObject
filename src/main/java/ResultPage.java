@@ -8,9 +8,4 @@ public class ResultPage {
         this.driver = driver;
     }
 
-    public ResultPage result(String text) {
-        mainPage.typeWord(text);
-        mainPage.clickOnSearchBtn();
-        return new ResultPage(driver);
-    }
 }

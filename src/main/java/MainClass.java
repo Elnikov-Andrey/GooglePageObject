@@ -1,5 +1,6 @@
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.remote.ProtocolHandshake;
 
 import java.util.concurrent.TimeUnit;
 
@@ -13,7 +14,7 @@ public class MainClass {
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         driver.get("https://google.com");
 
-        MainPage mainPage = new MainPage(driver);
-        mainPage.result("QA");
+        //MainPage mainPage = new MainPage(driver);
+        //mainPage.result("QA");
     }
 }

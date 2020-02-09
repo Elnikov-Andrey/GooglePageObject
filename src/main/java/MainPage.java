@@ -1,6 +1,10 @@
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainPage {
 
@@ -17,15 +21,15 @@ public class MainPage {
         return this;
     }
 
-    public ResultPage clickOnSearchBtn(){
-        searchButton.click();
-        return new ResultPage(driver);
-    }
+//    public ResultPage clickOnSearchBtn(){
+//        searchButton.click();
+//        return new ResultPage(driver);
+//    }
 
-    public ResultPage result(String text) {
+    public MainPage result(String text) {
         this.typeWord(text);
-        this.clickOnSearchBtn();
-        return new ResultPage(driver);
+        this.searchButton.click();
+        return new MainPage(driver);
     }
 }
 
